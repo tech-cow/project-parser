@@ -18,6 +18,8 @@ Third Party libraries are used in this project
 | Package           |   Description |
 | ------------- |:-------------:|
 | `pygithub`     |  Github RESTful API Python's Framwork  |
+| `json`     |  JSON dump  |
+| `pprint`     |  prettyprint JSON  |
 
 ## Getting Started
 
