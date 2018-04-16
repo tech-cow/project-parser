@@ -43,7 +43,9 @@ $ python3 parser.py
 ## To-Do
 
 🍉 The `js` output doesn't include var naming, see how to insert that naming prior inserting the JSON
+
 🍉 Code Clean up, and copy the python script into github.io folder
+
 🍉 License check
 
 ## License
