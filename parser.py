@@ -30,6 +30,8 @@ def parse_python(g, repo_hash, temp_list, res):
     temp_list = temp_list[::-1]
     for repo in temp_list:
         res.append(repo)
+    # pprint.pprint(res)
+    temp_list = []
 
 def parse_js(g, repo_hash, temp_list, res):
     '''
@@ -57,16 +59,19 @@ def parse_js(g, repo_hash, temp_list, res):
     temp_list = temp_list[::-1]
     for repo in temp_list:
         res.append(repo)
+    temp_list = []
 
 def main():
-    g = Github('cd4aa952b463cc1eaac993ac39699031a226d310')
+    g = Github('84fdc81714a73e2733f7f2bb1713254522f71fea')
     repo_hash = {}
     res = []
     parse_python(g, repo_hash, [], res)
     parse_js(g, repo_hash, [], res)
+
     with open('list_data.js', 'w') as outfile:
          outfile.write("var LIST_DATA = ")
          outfile.write(json.dumps(res, indent=4,  sort_keys=True))
+
 
 if __name__ == "__main__":
     main()
