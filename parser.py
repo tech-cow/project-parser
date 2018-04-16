@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from github import Github
 import pprint
 import json
@@ -14,7 +17,7 @@ def parse_python(g, repo_hash, temp_list, res):
 
     for repo in g.get_user().get_repos():
         if repo.stargazers_count > 0 and repo.language == 'Python':
-            repo_hash['types'] = "repo"
+            repo_hash['type'] = "repo"
             repo_hash['name'] = repo.name
             repo_hash['description'] = repo.description
             repo_hash['stars'] = repo.stargazers_count
@@ -58,7 +61,7 @@ def parse_js(g, repo_hash, temp_list, res):
 
 
 def main():
-    g = Github('3ba11a4df313ad1b810814d1d648d3ab250195e4')
+    g = Github('6dc8cd5d6add20a352fde6f5a19539882f842072')
     repo_hash = {}
     res = []
     parse_python(g, repo_hash, [], res)
