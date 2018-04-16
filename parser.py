@@ -64,7 +64,7 @@ def main():
     parse_python(g, repo_hash, [], res)
     parse_js(g, repo_hash, [], res)
 
-    with open('log.js', 'w') as outfile:
+    with open('list_data.js', 'w') as outfile:
         json.dump(res, outfile)
 
 if __name__ == "__main__":
