@@ -5,7 +5,7 @@ var LIST_DATA = [
     },
     {
         "description": "\ud83d\udd25 Python Solutions of LeetCode Questions \ud83d\udd25",
-        "forks": 51,
+        "forks": 52,
         "lang": "Python",
         "name": "LeetCode",
         "stars": 122,
@@ -20,84 +20,6 @@ var LIST_DATA = [
         "stars": 95,
         "type": "repo",
         "url": "https://github.com/mindfulness-at-the-computer/mindfulness-at-the-computer"
-    },
-    {
-        "description": "\ud83d\udc7b wolfcoin, a well-documented 50 liner mini-blockchain using Python \ud83d\udd17 ",
-        "forks": 0,
-        "lang": "Python",
-        "name": "wolfcoin",
-        "stars": 5,
-        "type": "repo",
-        "url": "https://github.com/yuzhoujr/wolfcoin"
-    },
-    {
-        "description": "\u2744 a well-documented replica of Daniel van Flymen's blockchain using Python\u26a1",
-        "forks": 2,
-        "lang": "Python",
-        "name": "blockmaster",
-        "stars": 5,
-        "type": "repo",
-        "url": "https://github.com/yuzhoujr/blockmaster"
-    },
-    {
-        "description": "\u5341\u5c0f\u65f6\u5b66\u4f1aPython",
-        "forks": 1,
-        "lang": "Python",
-        "name": "LovePython101",
-        "stars": 4,
-        "type": "repo",
-        "url": "https://github.com/yuzhoujr/LovePython101"
-    },
-    {
-        "description": "\ud83d\ude80 Refactoring Attempt of Engineerman's Snake Game \ud83d\udd30",
-        "forks": 0,
-        "lang": "Python",
-        "name": "snake",
-        "stars": 1,
-        "type": "repo",
-        "url": "https://github.com/yuzhoujr/snake"
-    },
-    {
-        "description": "Turn a long URL into a shorter version!",
-        "forks": 0,
-        "lang": "Python",
-        "name": "SimpleURL",
-        "stars": 1,
-        "type": "repo",
-        "url": "https://github.com/yuzhoujr/SimpleURL"
-    },
-    {
-        "description": "Final Project for CU Data Mining course",
-        "forks": 3,
-        "lang": "Python",
-        "name": "DataMiningLoL",
-        "stars": 1,
-        "type": "repo",
-        "url": "https://github.com/rhartsfield/DataMiningLoL"
-    }
-][
-    {
-        "name": "Python",
-        "type": "category"
-    },
-    {
-        "description": "\ud83d\udd25 Python Solutions of LeetCode Questions \ud83d\udd25",
-        "forks": 51,
-        "lang": "Python",
-        "name": "LeetCode",
-        "stars": 122,
-        "type": "repo",
-        "url": "https://github.com/yuzhoujr/LeetCode"
-    },
-    {
-        "description": "Web-app Project for CSCI 3308",
-        "forks": 0,
-        "lang": "JavaScript",
-        "name": "Grove",
-        "stars": 1,
-        "type": "repo",
-        "types": "repo",
-        "url": "https://github.com/yuzhoujr/Grove"
     },
     {
         "description": "\ud83d\udc7b wolfcoin, a well-documented 50 liner mini-blockchain using Python \ud83d\udd17 ",
@@ -190,7 +112,6 @@ var LIST_DATA = [
         "lang": "JavaScript",
         "name": "Grove",
         "stars": 1,
-        "type": "repo",
         "types": "repo",
         "url": "https://github.com/yuzhoujr/Grove"
     }

@@ -15,7 +15,7 @@ def parse_python(g, repo_hash, temp_list, res):
                })
 
     for repo in g.get_user().get_repos():
-        if repo.stargazers_count > 0 and repo.language == 'Python':
+        if repo.stargazers_count > 0 and repo.language == 'Python' and repo.html_url != "https://github.com/yuzhoujr/Grove":
             repo_hash['type'] = "repo"
             repo_hash['name'] = repo.name
             repo_hash['description'] = repo.description
@@ -28,10 +28,9 @@ def parse_python(g, repo_hash, temp_list, res):
 
     temp_list = sorted(temp_list, key=lambda d: d["stars"])
     temp_list = temp_list[::-1]
-    for repo in temp_list:
-        res.append(repo)
-    # pprint.pprint(res)
+    res += temp_list
     temp_list = []
+    # pprint.pprint(res)
 
 def parse_js(g, repo_hash, temp_list, res):
     '''
@@ -42,9 +41,8 @@ def parse_js(g, repo_hash, temp_list, res):
                 "type": "category",
                 "name": "JavaScript",
                })
-
     for repo in g.get_user().get_repos():
-        if repo.stargazers_count > 0 and repo.language == 'JavaScript':
+        if repo.language == 'JavaScript' and repo.stargazers_count > 0 and repo.name not in repo_hash :
             repo_hash['types'] = "repo"
             repo_hash['name'] = repo.name
             repo_hash['description'] = repo.description
@@ -57,21 +55,17 @@ def parse_js(g, repo_hash, temp_list, res):
 
     temp_list = sorted(temp_list, key=lambda d: d["stars"])
     temp_list = temp_list[::-1]
-    for repo in temp_list:
-        res.append(repo)
+    res += temp_list
     temp_list = []
 
 def main():
-    g = Github('84fdc81714a73e2733f7f2bb1713254522f71fea')
-    repo_hash = {}
+    g = Github('14e8bce41443515311e9deb6c0be57c4d33ec30d')
     res = []
-    parse_python(g, repo_hash, [], res)
-    parse_js(g, repo_hash, [], res)
-
+    parse_python(g, {}, [], res)
+    parse_js(g, {}, [], res)
     with open('list_data.js', 'w') as outfile:
          outfile.write("var LIST_DATA = ")
          outfile.write(json.dumps(res, indent=4,  sort_keys=True))
-
 
 if __name__ == "__main__":
     main()
