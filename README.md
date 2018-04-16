@@ -31,44 +31,12 @@ The user needs to have Terminal/Bash installed, Python version in this project i
 $ python3 parser.py
 ```
 
-### Code Walkthrough
+## Code
 
-In `class Block`: Creating a Block data structure that takes a few args including index, timestamp, a random data that could be anything and most importantly, a previous hash that the newly created block can build upon.
+![Demo](img/demo.png)
 
-```python
-class Block:
-    def __init__(self, index, timestamp, data, previous_hash):
-        self.index = index
-        self.timestamp = timestamp
-        self.data = data
-        self.previous_hash = previous_hash
-        self.hash = self.hash_block()
-
-    def hash_block(self):
-        """
-        Function Explain.
-        hash.update(arg) :Update the hash object with the string arg.
-        hash.hexdigest(arg) : Return the digest of the strings passed to the
-        update() method so far containing only hexadecimal digits.
-        """
-        sha = hasher.sha256()
-        sha.update(str(self.index) +
-                    str(self.timestamp) +
-                    str(self.data) +
-                    str(self.previous_hash))
-        return sha.hexdigest()
-```
-
-
-
-
-
-
-
-<!-- ## Demo -->
-<!-- The blockchain application prints out each hash along with a relative index. -->
-
-<!-- ![Demo](md_assets/demo.png) -->
+## Demo Output
+![Demo](img/output.png)
 
 
 ## License

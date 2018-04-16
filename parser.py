@@ -34,7 +34,7 @@ def parse_python(g, repo_hash, temp_list, res):
 
 def parse_js(g, repo_hash, temp_list, res):
     '''
-    语言为Python的Repo信息
+    语言为JavaScript的Repo信息
     根据星星进行从大到小排序
     '''
     res.append({
